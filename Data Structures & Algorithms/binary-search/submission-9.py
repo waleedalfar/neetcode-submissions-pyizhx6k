@@ -1,0 +1,24 @@
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l = 0
+        r = len(nums) - 1
+
+        nums.sort()
+
+        while l <= r:
+            mid = (l + r) // 2
+
+            if nums[mid] == target:
+                return mid
+            
+            if nums[mid] < target:
+                l += 1
+
+            if nums[mid] > target:
+                r -= 1
+
+
+
+
+
+        return -1
